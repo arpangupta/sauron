@@ -7,7 +7,7 @@ class UpdateController < ApplicationController
   	action = arr[1].split(':')[1]
   	json = s.split('JSON')[1].split(' : ')[1]
   	json = JSON.parse json
-  	File.open("orderfeed.txt", "a+"){|f| f << action<<':'<<key<<':'<<json['pid']<<':'<<json['loc_id']<<"\n" }
+  	File.open("/home/ubuntu/hack_sauron/sauron/sauron/app/controllers/orderfeed.txt", "a+"){|f| f << action<<':'<<key<<':'<<json['pid']<<':'<<json['loc_id']<<":"<<json['date']<<"\n" }
   	return 'thanks'
   end
 end
