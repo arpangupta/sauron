@@ -1,4 +1,5 @@
 Sauron::Application.routes.draw do
+  get "displayfeed/display"
   get "update/save"
   post "update/save"
 
